@@ -1,0 +1,31 @@
+import 'package:flutter/material.dart';
+
+class TestCase2AddTen extends StatefulWidget {
+  @override
+  _TestCase2AddTenState createState() => _TestCase2AddTenState();
+}
+
+class _TestCase2AddTenState extends State<TestCase2AddTen> {
+  int count = 0;
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(title: Text("Test Case 2: Increment by 10")),
+      body: Center(
+        child: Text(
+          "$count",
+          style: TextStyle(fontSize: 40),
+        ),
+      ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {
+          setState(() {
+            count = count + 10; // Increase by 10
+          });
+        },
+        child: Icon(Icons.add),
+      ),
+    );
+  }
+}

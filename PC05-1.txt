@@ -1,0 +1,31 @@
+import 'package:flutter/material.dart';
+
+class TestCase1Multiply extends StatefulWidget {
+  @override
+  _TestCase1MultiplyState createState() => _TestCase1MultiplyState();
+}
+
+class _TestCase1MultiplyState extends State<TestCase1Multiply> {
+  int i = 1;
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(title: Text("Test Case 1: Multiply")),
+      body: Center(
+        child: Text(
+          "$i",
+          style: TextStyle(fontSize: 40),
+        ),
+      ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {
+          setState(() {
+            i = i * 10; // Multiply by 10
+          });
+        },
+        child: Icon(Icons.add),
+      ),
+    );
+  }
+}
